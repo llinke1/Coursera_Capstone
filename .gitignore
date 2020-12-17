@@ -1,2 +1,6 @@
 .ipynb_checkpoints/
 DS*
+*.aux
+*.log
+*.out
+*.gz
