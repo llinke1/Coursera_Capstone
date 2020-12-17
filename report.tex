@@ -1,0 +1,75 @@
+\documentclass[UKenglish]{scrreprt}
+
+\RequirePackage[utf8]{inputenc}              % Direkte Eingabe von ä usw.
+\RequirePackage[T1]{fontenc}                 % Font Kodierung für die Ausgabe        
+\RequirePackage{babel}                       % Verschiedenste sprach-spezifische Extras
+\RequirePackage[autostyle=true]{csquotes}    % Intelligente Anführungszeichen
+\RequirePackage{graphicx}                    % zum Bilder einbinden
+\RequirePackage[]{amssymb}                   %
+\RequirePackage{amsmath}                     %Mathekram
+\RequirePackage{physics}                     %Für Einheiten und so
+\RequirePackage{hyperref}                    %
+\RequirePackage[all]{hypcap}                 %
+\RequirePackage{newtxmath}                   % Schönere Schriftart
+\RequirePackage{newtxtext}                   % Schönere Schriftart    
+\KOMAoptions{fontsize=11pt, paper=a4}        % Schriftgröße und Papierformat setzen
+\KOMAoptions{DIV=11}                         % Parameter mit dem man den Seitenrand ändern kann
+\KOMAoptions{listof=totoc}                   % Abbildungs- und Tabellenverzeichnis im Inhaltverzeichnis  aufzuführen
+
+
+\title{Where should I go? Finding the optimal neighborhood in Bonn to move to from Munich}
+\subtitle{IBM Applied Data Science Capstone Project}
+\author{Laila Linke}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Executive summary}
+
+\paragraph{Key question:}In this report, we answer the following key question: \emph{Which neighborhoods in Bonn are most similar to the \enquote{Studentenstadt} neighborhood in Munich?} This question is relevant for people, who plan to move from Munich to Bonn and want to choose their new neighborhood to have similar stores, amenities, and restaurants as their current living place. 
+
+\paragraph{Data \& Methodology:}We tackle this question with data on the location and category of venues from Foursquare, as well as publicly available location data from the city council of Bonn. Using this data, we find the most common venue categories for each neighborhood in Bonn and compare these to the most common venues near the \enquote{Studentenstadt} in Munich. We also cluster similar neighborhoods in Bonn using the k-means clustering algorithm and find the neighborhood cluster in Bonn that is closest to Munich. 
+
+\paragraph{Results:}Our results are
+\begin{itemize}
+	\item The neighborhood most similar to the \enquote{Studentenstadt} in Munich is ...
+	\item The neighborhood cluster most similar to the \enquote{Studentenstadt} consists of ...
+	\item The neighborhoods .... are the most dissimilar to the \enquote{Studentenstadt}.
+\end{itemize}
+
+\paragraph{Recommendations:}Based on these results we recommend a person moving from Munich to Bonn to \emph{move preferably to ...} and to \emph{avoid moving to ...}.
+
+\chapter{Introduction}
+\section{Background}
+\section{Problem}
+\section{Proposed methodology and structure of this report}
+
+\chapter{Data}
+
+\section{Used Datasets and -sources}
+
+\subsection{Location and area of Bonn's neighborhoods}
+
+
+\subsection{Location and categories of venues}
+
+\section{Data cleaning and transformation}
+\subsection{Determination of neighborhood centres in Bonn}
+\subsection{Determination of venues per neighborhood}
+\subsection{One-hot encoding}
+\subsection{Structure of final datasets}
+
+\chapter{Analysis}
+
+\section{Determination of most similar neighborhood in Bonn}
+
+\section{Determination of most similar neighborhood cluster in Bonn}
+
+\chapter{Results}
+
+\chapter{Conclusion}
+\section{Recommendation}
+\section{Directions for future exploration}
+\end{document}
