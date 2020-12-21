@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: report.aux
+The style file: myBib.bst
+Database file #1: biblio.bib
+Warning--empty journal in muenchen
+Warning--empty journal in bonn
+Warning--empty journal in Ortsteile
+You've used 3 entries,
+            2599 wiz_defined-function locations,
+            575 strings with 5297 characters,
+and the built_in function-call counts, 823 in all, are:
+= -- 46
+> -- 12
+< -- 0
++ -- 6
+- -- 3
+* -- 45
+:= -- 95
+add.period$ -- 13
+call.type$ -- 3
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 96
+empty$ -- 89
+format.name$ -- 3
+if$ -- 166
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 25
+newline$ -- 35
+num.names$ -- 3
+pop$ -- 42
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 15
+stack$ -- 0
+substring$ -- 2
+swap$ -- 50
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 3
+width$ -- 4
+write$ -- 50
+(There were 3 warnings)

@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{muenchen}
+\textbf{Bayerisches~Landesamt für Statistik}.
+\newblock \emph{Statistische Berichte - Einwohnerzahlen am 30. September 2020}.
+\newblock 09 2020.
+\newblock
+  \urlprefix\url{https://www.statistik.bayern.de/mam/produkte/veroffentlichungen/statistische_berichte/a1200c_202043.pdf}.
+\bibAnnoteFile{muenchen}
+
+\bibitem{bonn}
+\textbf{Landesbetrieb~Information und Technik Nordrhein-Westfalen}.
+\newblock \emph{{Bevölkerung der Gemeinden Nordrhein-Westfalens am 31.
+  Dezember 2019}}.
+\newblock 12 2019.
+\newblock
+  \urlprefix\url{https://www.landesdatenbank.nrw.de/ldbnrw/online;jsessionid=FBC481AAC50656B8CA9E933111BC242A.ldb2?sequenz=tabelleErgebnis&selectionname=12411-31iz#abreadcrumb}.
+\bibAnnoteFile{bonn}
+
+\bibitem{Ortsteile}
+\textbf{{Stadt Bonn}}.
+\newblock \emph{Flächen der Ortsteile}.
+\newblock 03 2020.
+\newblock
+  \urlprefix\url{https://opendata.bonn.de/dataset/fl%C3%A4chen-der-ortsteile}.
+\newblock Accessed on 19.12.2020.
+\bibAnnoteFile{Ortsteile}
+
+\end{thebibliography}

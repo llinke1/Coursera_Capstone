@@ -69,14 +69,14 @@ Our analysis consists of three parts. In the first part we qualitatively explore
 \label{sec:Data}
 
 \section{Used Datasets and -sources}
-In this analysis we require data on the positions of Bonn's neighborhoods, as well as on the position and category of amenities, restaurant, stores, and other facilities in Bonn and near the current home in Munich. We describe our two data sets in the following.
+In this analysis, we require data on the positions of Bonn's neighbourhoods, as well as on the location and category of amenities, restaurants, stores, and other facilities in Bonn and near the current home in Munich. We describe our two data sets in the following.
 
-\subsection{Location and center of Bonn's neighborhoods}
-We use the location and borders of Bonn's neighborhoods provided by the city administration on their open data platform \footnote{\href{https://opendata.bonn.de/dataset/fl\%C3\%A4chen-der-ortsteile}{https://opendata.bonn.de/dataset/fl\%C3\%A4chen-der-ortsteile}}\cite{Ortsteile}. This data is available as a GeoJSON file and contains the name, ID and polygon shape of each of the 51 neighborhoods (in German: \enquote{Stadtteile}), as well as their respective city district and district ID.
-The data was first published on 11th February 2015 and is being updated daily. It is available publicly under a Creative Commons CC Zero License, meaning that 
+\subsection{Location and centre of Bonn's neighbourhoods}
+We use the location and borders of Bonn's neighbourhoods provided by the city administration on their open data platform \footnote{\href{https://opendata.bonn.de/dataset/fl\%C3\%A4chen-der-ortsteile}{https://opendata.bonn.de/dataset/fl\%C3\%A4chen-der-ortsteile}}\cite{Ortsteile}. This data is available as a GeoJSON file and contains the name, ID and polygon shape of each of the 51 neighbourhoods (in German: \enquote{Stadtteile}), as well as their respective city district and district ID.
+The data was first published on 11th February 2015 and is updated daily. It is available publicly under a Creative Commons CC Zero License, meaning that 
 it is in the Public Domain and can be freely used and shared for any purpose.
 
-We access the data with the python package \verb|geopandas|\footnote{\href{https://geopandas.org/}{https://geopandas.org/}} and read it into a data frame, whose first five rows are shown in Table REF. We can also visualize the location of Bonn's neighborhoods, using the \verb|folium| package \footnote{\href{https://python-visualization.github.io/folium/}{https://python-visualization.github.io/folium/}}. The resulting map is shown in Fig.~\ref{fig:map neighborhoods}.
+We access the data with the python package \verb|geopandas|\footnote{\href{https://geopandas.org/}{https://geopandas.org/}} and read it into a data frame, whose first five rows are shown in Table REF. We can also visualize the location of Bonn's neighbourhoods, using the \verb|folium| package \footnote{\href{https://python-visualization.github.io/folium/}{https://python-visualization.github.io/folium/}}. The resulting map is shown in Fig.~\ref{fig:map neighbourhoods}.
 
 \begin{figure}[htbp]
 	\centering
@@ -85,16 +85,16 @@ We access the data with the python package \verb|geopandas|\footnote{\href{https
 	\label{fig:map neighborhoods}
 \end{figure}
 
-To simplify our analysis, we drop the columns describing the neighborhood ID, the district name, and the district ID from this data frame, as these are not related to our analysis. We also find the center of each neighborhood using the \verb|centroid| method of \verb|geopandas| data frames and add the longitude and latitude of the centers to the data frame as new columns.
+To simplify our analysis, we drop the columns describing the neighbourhood ID, the district name, and the district ID from this data frame, as these are not related to our analysis. We also find the centre of each neighbourhood using the \verb|centroid| method of \verb|geopandas| data frames and add the longitude and latitude of the centres to the data frame as new columns.
 
 \subsection{Location and categories of venues}
-To obtain the location and categories close to the Munich address and in each neighborhood in Bonn, we use Foursquare. 
-Foursquare is a search and discovery mobile app, that provides users with the opportunity to find new venues close to them, recommend and review visited venues and \enquote{check-in} at their favourite places. Due to the popularity of their app, Foursquare has obtained a large dataset of the location, category and rating of venues like restaurants, stores, and leisure amenities all over the world. This dataset is accessible via an Application Programm Interface (API), which we are using for our analysis.
-Using the Foursquare API and data commercially requires a paid subscription, however, here we are only considering a personal use, which is free. 
+To obtain the location and categories close to the Munich address and in each neighbourhood in Bonn, we use Foursquare. 
+Foursquare is a search and discovery mobile app that provides users with the opportunity to find new venues close to them, recommend and review visited venues and \enquote{check-in} at their favourite places. Due to the app's popularity, Foursquare has obtained a large dataset of the location, category and rating of venues like restaurants, stores, and leisure amenities all over the world. This dataset is accessible via an Application Programm Interface (API), which we are using for our analysis.
+Using the Foursquare API and data commercially requires a paid subscription. However, here we are only considering personal use, which is free. 
 
-We use the API to obtain the name, location and category of each venue listed on Foursquare within 500 m of the center of each of Bonn's neighborhoods and the Kaulbachstraße in Munich. From the API we obtain 433 venues in Bonn, most of which are supermarkets, and 38 venues in Munich, most of which are cafés. 
+We use the API to obtain the name, location and category of each venue listed on Foursquare within 500 m of the centre of each of Bonn's neighbourhoods and the Kaulbachstraße in Munich. From the API we obtain 433 venues in Bonn, most of which are supermarkets, and 38 in Munich, most of which are cafés. 
 
-To visually inspect the data, we display the venues along with the neighborhood centres in Bonn, and the address in Munich in Figs \ref{fig:map venues_bonn} and \ref{fig:map venues_munich}. This inspection shows, that there are 6 neighborhoods, which do not have any listed venues (Röttgen, Schweinheim, Heiderhof, Geislar, Brüser Berg and Holzlar). Our analysis therefore cannot apply to these neighborhoods.
+To visually inspect the data, we display the venues along with the neighbourhood centres in Bonn, and the address in Munich in Figs \ref{fig:map venues_bonn} and \ref{fig:map venues_munich}. This inspection shows that there are six neighbourhoods, which do not have any listed venues (Röttgen, Schweinheim, Heiderhof, Geislar, Brüser Berg and Holzlar). Our analysis, therefore, cannot apply to these neighbourhoods.
 
 \begin{figure}[htbp]
 	\centering
@@ -109,7 +109,7 @@ To visually inspect the data, we display the venues along with the neighborhood 
 	\caption{Map of venues in Munich (red circles) around current address (blue circle).}
 	\label{fig:map venues_munich}
 \end{figure}
-
+ 
 %\chapter{Analysis}
 %\label{sec:Analysis}
 %Our analysis consists of three parts. In the first part we qualitatively explore the data, by finding the most common venue categories per neighborhood. In the second part we quantify the similarity of each neighborhood with the Munich area and find the single most similar neighborhood. In the third part we group alike neighborhoods into clusters and find the cluster of neighborhoods most similar to Munich.
