@@ -4,3 +4,5 @@ DS*
 *.log
 *.out
 *.gz
+.env
+*~
